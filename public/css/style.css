@@ -1,0 +1,579 @@
+body{
+    background: white;
+    font-family: "Microsoft YaHei UI";
+    padding-top:110px;
+}
+.main{
+    width: 100%;
+    overflow: hidden;
+}
+.header{
+    position: fixed;
+    top:0;
+    z-index: 10000;
+    background: #fff;
+}
+.main .container{
+    width:1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.nav-container{
+    width:1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.device-container{
+    width:1117px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.header .logo{
+    width:300px;
+    height:110px;
+    background: url("../img/logo.png") no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.header .wx-pic{
+    height:90px;
+    width:90px;
+    margin-top: 10px;
+    background: url("../img/vertor.jpg") no-repeat center;
+    background-size: cover;
+    float: right;
+    margin-right: 20px;
+    margin-left: 8px;
+}
+.header .show-tel{
+    width:260px;
+    height:110px;
+    overflow: hidden;
+    float:right;
+}
+.header .show-tel .left{
+    width:90px;
+    height:90px;
+    margin-top:10px;
+    background: url("../img/tel.jpg") no-repeat center;
+    background-size: contain;
+    float: left;
+}
+.header .show-tel .right{
+    float: left;
+    margin-left:5px;
+}
+.header .show-tel .title{
+    margin-top:28px;
+}
+.header .show-tel .tel-num{
+    margin-top:10px;
+    font-weight:bold;
+    font-size: 22px;
+    color: #FF9900;
+}
+.nav{
+    height:60px;
+    width:100%;
+    background: url("../img/nav_bg.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1000;
+}
+.nav ul{
+    font-size: 0;
+}
+.nav li{
+    display: inline-block;
+    height:49px;
+    width:110px;
+    text-align: center;
+    margin-top:5px;
+    font-size: 14px;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.nav li a{
+    color:#fff;
+    text-decoration: none;
+    line-height: 50px;
+}
+.nav-container .active{
+    background: #FF9900;
+}
+.nav li:hover{
+    background: #FF9900;
+}
+.banner{
+    height:400px;
+    margin-top:25px;
+}
+.banner .swiper-wrapper{
+    height:400px;
+}
+.banner .slide1{
+    background: url("../img/11.png") no-repeat center;
+    background-size: cover;
+}
+.banner .slide2{
+    background: url("../img/22.png") no-repeat center;
+    background-size: cover;
+}
+.about-us{
+    padding-top:40px;
+}
+.about-us div{
+    margin: 0 auto;
+}
+.about-us .title{
+    width:200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    color: #107FD8;
+}
+.about-us .about-bg{
+    width:200px;
+    height:5px;
+    background: url("../img/about-bg.png") no-repeat center;
+    background-size: cover;
+}
+.about-us .title-en{
+    width:200px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    color: #107FD8;
+}
+.about-us p{
+    width:900px;
+    text-indent: 1em;
+    line-height: 2;
+    text-align: justify;
+    margin: 0 auto;
+    color: #5a5a5a;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.about-us .show-adv{
+    width:843px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom:60px;
+}
+.about-us .show-adv-detail{
+    width:190px;
+    height: 56px;
+    border-radius: 8px;
+    border:1px solid #107FD8;
+    margin-right:25px;
+    float: left;
+    position: relative;
+}
+.about-us .show-adv-detail:nth-child(4){
+    margin-right: 0;
+}
+.about-us .show-adv-1{
+    position: absolute;
+    width:45px;
+    height:45px;
+    left: 18px;
+    top: 7px;
+    background: url("../img/icon-1.png") no-repeat center;
+    background-size: cover;
+}
+.about-us .show-adv-detail .title{
+    width: 136px;
+    height:56px;
+    line-height: 56px;
+    font-size: 24px;
+    color:#107FD8;
+    text-align: center;
+    float:right;
+    font-weight: normal;
+}
+.about-us .show-adv-2{
+    background: url("../img/icon-2.png") no-repeat center;
+    background-size: cover;
+}
+.about-us .show-adv-3{
+    background: url("../img/icon-3.png") no-repeat center;
+    background-size: cover;
+}
+.about-us .show-adv-4{
+    background: url("../img/icon-4.png") no-repeat center;
+    background-size: cover;
+}
+.device-list{
+    height:660px;
+    background: url("../img/device-bg.jpg") no-repeat center;
+    background-size: cover;
+    padding-top:70px;
+    margin-top: 30px;
+}
+.device-list .pro-title{
+    width:188px;
+    height:60px;
+    color:white;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.device-list .pro-title .left{
+    width:60px;
+    height:60px;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    float: left;
+    margin-right: -5px;
+    margin-top:-10px;
+}
+.device-list .pro-title .right{
+    width:130px;
+    height:60px;
+    float: left;
+    overflow: hidden;
+}
+.device-list .right .top{
+    font-size: 26px;
+    font-weight: bold;
+}
+.device-list .right .bottom{
+    font-size: 12px;
+    font-weight: normal;
+}
+.device-detail{
+    width: 100%;
+    height:300px;
+    overflow: hidden;
+}
+.device-detail .left{
+    height: 300px;
+    width:160px;
+    float: left;
+}
+.device-detail .right{
+    height: 300px;
+    width:942px;
+    float: left;
+    margin-left:15px;
+    position:relative;
+}
+.device-detail .left .button{
+    width:150px;
+    height:50px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 8px;
+    background: #fff;
+    color:#107FDA;
+    margin-bottom:8px;
+    cursor: pointer;
+}
+.device-detail .left .active{
+    background: #FF9900;
+    color:white;
+}
+.device-detail .left .button:hover{
+    background: #FF9900;
+    color:white;
+}
+.device-detail .right .r-show{
+    width: 220px;
+    height:290px;
+    border:1px solid #fff;
+    margin-right:15px;
+    float: left;
+    cursor: pointer;
+}
+.device-detail .r-show .r-pic-title:hover{
+    color: #fff;
+    background: #FFA800;
+}
+.device-detail .right .r-show:hover{
+    border:1px solid #FFA800;
+}
+.device-detail .right .r-show:last-child{
+    margin-right:0;
+}
+.r-show-container{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.device-detail .right .r-pic{
+    width:200px;
+    height:240px;
+    margin: 0 auto;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.device-detail .right .r-pic-title{
+    width:200px;
+    height:20px;
+    line-height: 20px;
+    margin: 0 auto;
+    background: #fff;
+    text-align: center;
+}
+.device-detail .right .r1-pic1{
+    background: url("../img/大型组合冷库.png") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r1-pic2{
+    background: url("../img/小型组合冷库.jpg") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r1-pic3{
+    background: url("../img/青岛啤酒.jpg") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r1-pic4{
+    background: url("../img/烟台绿叶动物保健品有限公司.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.device-detail .right .r2-pic1{
+    background: url("../img/铝合金排管.jpg") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r2-pic2{
+    background: url("../img/铝合金排管2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.device-detail .right .r3-pic1{
+    background: url("../img/新型铝合金搁架.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.device-detail .right .r4-pic1{
+    background: url("../img/V型顶吹风风冷机组.png") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r4-pic2{
+    background: url("../img/并联机组.jpg") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r4-pic3{
+    background: url("../img/并联机组.png") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r4-pic4{
+    background: url("../img/活塞式风冷机组.png") no-repeat center;
+    background-size: cover;
+}
+
+.device-detail .right .r5-pic1{
+    background: url("../img/风冷式速冻柜.jpg") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r5-pic2{
+    background: url("../img/现场制作速冻柜.jpg") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r5-pic3{
+    background: url("../img/现场组装速冻柜.jpg") no-repeat center;
+    background-size: cover;
+}
+.device-detail .right .r5-pic4{
+    background: url("../img/直冷式速冻柜.jpg") no-repeat center;
+    background-size: cover;
+}
+.new-show{
+    background: #F3F3F3;
+}
+.new-show .new-container{
+    width:100%;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.new-show .new-container .left{
+    padding:20px;
+    width:750px;
+    height:490px;
+    margin-right: 20px;
+    float: left;
+    border-top:3px solid #107FD8;
+    background: #fff;
+}
+.new-show .new-container .left .left-title{
+    width:100%;
+    color: #107FD8;
+    font-size: 24px;
+    text-align: left;
+}
+.new-show .new-container .left-detail{
+    padding-top:10px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom:1px dotted #929292;
+    padding-bottom:5px;
+}
+.new-show .left-detail .left-detail-title{
+    color:#191919;
+    line-height: 24px;
+    font-weight: bold;
+}
+.new-show .left-detail .left-detail-time, .new-show .left-detail .left-detail-content{
+    color:#929292;
+    line-height: 24px;
+}
+.new-show .new-container .right{
+    padding:20px;
+    width:350px;
+    height:490px;
+    float: left;
+    border-top:3px solid #107FD8;
+    background: #fff;
+}
+.new-show .right-detail{
+    margin-top:15px;
+    overflow: hidden;
+    padding-bottom:12px;
+    border-bottom:1px dotted #929292;
+}
+.new-show .new-container .right .right-title{
+    width:100%;
+    font-size: 24px;
+    color:#107FD8;
+}
+.new-show .new-container .right-left{
+    width:60px;
+    height:60px;
+    color:#fff;
+    float:left;
+    background: #107FD8;
+    margin-right:10px;
+}
+.new-show .new-container .right-right{
+    color: #929292;
+}
+.new-show .new-container .right-right div{
+    line-height: 20px;
+}
+.new-show .new-container .right-left .left-top{
+    width:100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+}
+.new-show .new-container .right-left .left-bottom{
+    width:100%;
+    line-height: 20px;
+    text-align: center;
+    margin-top: -4px;
+}
+.footer{
+    background: #107FD8;
+    overflow: hidden;
+    padding-top:30px;
+    padding-bottom:30px;
+    color: #fff;
+}
+.footer .footer-nav{
+    width: 360px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.footer .footer-nav li{
+    display: inline-block;
+    float: left;
+    width:90px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.footer .footer-nav li a{
+    color:#fff;
+    text-decoration: none;
+}
+.footer .footer-info, .footer .footer-detail{
+    width:1200px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    margin: auto;
+}
+.footer .footer-detail{
+    height:20px;
+    line-height: 20px;
+}
+.roll-this{
+    width:3000px;height:150px;position: absolute;left:0;top:0;cursor: pointer;
+}
+.detail-roll{
+    width:150px;height:150px;padding:5px;border:1px solid #fff;margin-right: 10px;float:left;
+}
+.roll-pic{
+    width:150px;height:130px;background: antiquewhite
+}
+.roll-head{
+    text-align: center;color: #fff;line-height: 20px;
+}
+.roll-pic-1{
+    background: url("../img/V型顶吹风风冷机组.png") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-2{
+    background: url("../img/并联机组.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-3{
+    background: url("../img/并联机组.png") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-4{
+    background: url("../img/大型组合冷库.png") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-5{
+     background: url("../img/风冷式速冻柜.jpg") no-repeat center;
+     background-size: contain;
+}
+.roll-pic-6{
+    background: url("../img/活塞式风冷机组.png") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-7{
+    background: url("../img/铝合金排管.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-8{
+    background: url("../img/铝合金排管2.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-9{
+    background: url("../img/青岛啤酒.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-10{
+    background: url("../img/现场制作速冻柜.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-11{
+    background: url("../img/现场组装速冻柜.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-12{
+    background: url("../img/小型组合冷库.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-13{
+    background: url("../img/新型铝合金搁架.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-14{
+    background: url("../img/烟台绿叶动物保健品有限公司.jpg") no-repeat center;
+    background-size: contain;
+}
+.roll-pic-15{
+    background: url("../img/直冷式速冻柜.jpg") no-repeat center;
+    background-size: contain;
+}
+

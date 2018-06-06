@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>寒冰制冷</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta content="email=no" name="format-detection">
+    <meta name="Keywords" content="冷库安装,制冷设备">
+    <meta name="Description" content="主要提供烟台冷库安装,烟台制冷设备等,公司拥有独立设计图纸,安装调试,运营管理大型制冷工程的整体实力,短短几年时间已为上百家客户提供了优良的产品和服务">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/adapter.js"></script>
+    <style>
+        body{
+            background: #fff;
+            font-family: '微软雅黑';
+        }
+        .head{
+            padding-top:0.2rem;
+            display: inline-block;
+            width:100%;
+            line-height: 2.2rem;
+            text-align: center;
+            padding-left:0.5rem;
+        }
+        .banner-container{
+            width:100%;
+            height: 9rem;
+        }
+        .wqd-svgicon path{fill:#333;}
+        .showHead{
+            display: inline-block;
+            letter-spacing: 2px;
+            color:#333;
+            font-weight: 300;
+            font-size: 0.8rem;
+            float:left;
+        }
+        .menu-icon{
+            margin-right:0.6rem;
+            float:right;
+        }
+        .menu-show{
+            position: absolute;
+            top:2.5rem;
+            width:100%;
+            overflow: hidden;
+            display: none;
+            z-index: 100;
+            background: #fff;
+        }
+        .menu-show li{
+            width:100%;
+            height:1.3rem;
+            line-height: 1.3rem;
+        }
+        .menu-show li a{
+            display: inline-block;
+            color:#333;
+            margin-left:0.5rem;
+        }
+        .menu-show .active{
+            background: #107FD8;
+        }
+        .menu-show .active a{
+            color:#fff;
+        }
+        .menu-show li:hover{
+            background: #333;
+        }
+        .menu-show li:hover a{
+            color:#fff;
+        }
+        .introduce, .device-list{
+            width:100%;
+            overflow: hidden;
+            background: #F5F5F5;
+            padding-top:1.5rem;
+        }
+        .device-list{
+            padding-top:0.5rem;
+            background: #fff;
+        }
+        .introduce .detail, .device-list .detail{
+            width:80%;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        .showPic{
+            width:100%;
+        }
+        .showPTitle{
+            width:100%;
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color:#4C4B4B;
+            margin-bottom:5px;
+        }
+        .introduce .text{
+            width:100%;
+            text-align: justify;
+            color: #808080;
+            font-size: 0.6rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .device-list img{
+            margin-top:0.5rem;
+        }
+        .device-list span{
+            display: inline-block;
+            width:100%;
+            text-align: center;
+        }
+        .contactUs{
+            width:100%;
+            overflow: hidden;
+            background: #107FD8;
+            padding-top:0.5rem;
+        }
+        .contactUs .contactPic{
+            width:8rem;
+            height:8rem;
+            margin:1rem auto;
+            background: url("./img/vertor.jpg") no-repeat center;
+            background-size:contain;
+        }
+        .contactUs .title{
+            width:80%;
+            margin: 0 auto;
+            line-height: 1.5rem;
+            font-size: 0.8rem;
+            color:#FFF;
+        }
+        .contactDetail{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .contactDetail span{
+            display: block;
+            color:#eee;
+        }
+        .showName{
+            display: inline-block;
+            width:100%;
+            color:#eee;
+            font-size: 0.6rem;
+            text-align: center;
+            margin-top:0.6rem;
+        }
+        .swapShowText{
+            width:9rem;
+            height:5rem;
+            font-size: 1rem;
+            text-align: right;
+            position: relative;
+            right:-6rem;
+            top:9rem;
+            font-family: Arial;
+            font-weight: bold;
+        }
+        .white{
+            color:#fff;
+        }
+        .deviceList .showTitle{
+            font-size: 0.7rem;;
+            font-weight: bold;
+        }
+        .deviceList{
+            margin-top:1rem;
+        }
+        #device-list{
+            padding-bottom:1rem;
+            width:13rem;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .logo{
+            display: inline-block;
+            width:7rem;
+            height:2.2rem;
+            background: url("./img/logo.png") no-repeat center;
+            background-size: contain;
+            float:left;
+            margin-left:-0.5rem;
+        }
+        .detail .detail-pic-cont{
+            width:10rem;
+            height:6rem;
+            margin: 0 auto;
+            background: url("./img/pic1.jpg") no-repeat center;
+            background-size: contain;
+            margin-bottom: 0.5rem;
+        }
+        .dl-container{
+            width:6rem;
+            height:5.5rem;
+            float:left;
+            margin-bottom:8px;
+            border:1px solid #eee;
+            padding-top:0.2rem;
+            margin-right:calc(1rem - 4px);
+        }
+        .dl-container:nth-child(2n+1){
+            margin-right:0;
+        }
+        .dl-container .dl-pic{
+            width:6rem;
+            height:4.3rem;
+        }
+        .dl-container .dl-title{
+            line-height: 1rem;
+            text-align: center;
+        }
+        .picFlag1{
+            background: url("./img/速冻柜.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag2{
+            background: url("./img/速冻柜2.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag3{
+            background: url("./img/速冻柜3.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag4{
+            background: url("./img/冷冻涡旋一体机组.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag5{
+            background: url("./img/活塞式风冷机组.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag6{
+            background: url("./img/螺杆并联机组.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag7{
+            background: url("./img/新型搁架.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag8{
+            background: url("./img/新型铝合金搁架.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag9{
+            background: url("./img/新型铝合金搁架1.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag10{
+            background: url("./img/新型铝合金搁架2.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag11{
+            background: url("./img/新型铝合金排管.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag12{
+            background: url("./img/铝合金排管.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag13{
+            background: url("./img/中型组合冷库.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag14{
+            background: url("./img/大型组合冷库.png") no-repeat center;
+            background-size: cover;
+        }
+        .detail{
+            margin-bottom: 2.4rem;
+        }
+        .fixedInfo{
+            width:100%;
+            height:1.8rem;
+            background: #107FD8;
+            position: fixed;
+            bottom:0;
+            overflow: hidden;
+        }
+        .fixedInfo div{
+            width:calc(33.33% - 1px);
+            color:#eee;
+            float: left;
+            line-height: 1.8rem;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+        .fixedInfo .info_detail{
+            border-right:1px dotted #eee;
+            border-top:1px dotted #eee;
+            cursor: pointer;
+        }
+        .fixedInfo .info_detail:nth-child(3){
+            border-right:none;
+        }
+        .fixedInfo .toPhone a{
+            display: inline-block;
+            width:100%;
+            height:100%;
+            color:#eee;
+            text-decoration: none;
+        }
+        .swiper-container{
+            overflow: hidden;
+            width: 100%;
+            height:6rem;
+            background:url("./img/11.png") no-repeat center;
+            background-size: cover;
+        }
+        .show-pic-container{
+            width:80%;
+            height:16rem;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="fixedInfo">
+    <div class="info_detail toPage">首页</div>
+    <div class="info_detail toPhone"><a href="tel:13806385616">电话</a></div>
+    <div class="info_detail toAddress">地址</div>
+</div>
+<div class="head">
+    <!--<span class="showHead">寒冰制冷</span>-->
+    <div class="logo"></div>
+    <div class="menu-icon" id="menu-icon">
+        <svg style="display:inline-block;vertical-align: middle;margin:0 auto;width:40px;height:40px;" viewBox="-250 -250 2392 2392" xmlns="http://www.w3.org/2000/svg" class="wqd-svgicon"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"></path></svg>
+    </div>
+</div>
+<ul class="menu-show" id="menu-show">
+    <!--<li class="active"><a>首页</a></li>
+    <li><a data-id="introduce">公司简介</a></li>
+    <li><a data-id="device-list">设备列表</a></li>
+    <li><a data-id="contactUs">联系我们</a></li>-->
+</ul>
+<div class="swiper-container">
+
+</div>
+<div class="show-pic-container"></div>
+<div class="contactUs" id="contactUs">
+    <div class="detail">
+        <div class="showPTitle" style="color:white;">联系我们</div>
+        <!--<div class="contactPic">
+
+        </div>-->
+        <div class="contactDetail" style="font-size: 16px">
+            <span>电话：13806385616</span>
+            <span>微信：13806385616</span>
+            <span>邮箱：13806385616@139.com</span>
+        </div>
+        <div class="showName">鲁ICP备14006355号 @烟台寒冰制冷设备有限公司</div>
+    </div>
+</div>
+<script>
+    var temUse = window.location.pathname;
+    var toAddress = document.getElementsByClassName('toAddress')[0];
+    toAddress.onclick = function () {
+        if(temUse.indexOf('mobileMain_map.html') === -1) {//当前为mobileMain.html
+            window.location.href = './mobileMain_map.html'
+        }
+    }
+    var urlIndex = window.location.href.split('?')[1].split('=')[1]-1;
+    var urlArray = ['./img/风冷式速冻柜.jpg', './img/现场制作速冻柜.jpg', './img/现场组装速冻柜.jpg', './img/直冷式速冻柜.jpg', './img/V型顶吹风风冷机组.png', './img/并联机组.jpg', './img/并联机组.png','./img/活塞式风冷机组.png', './img/新型铝合金搁架.jpg', './img/铝合金排管.jpg', './img/铝合金排管2.jpg', './img/大型组合冷库.png', './img/小型组合冷库.jpg','./img/青岛啤酒.jpg','./img/烟台绿叶动物保健品有限公司.jpg'];
+    var picContainer = document.getElementsByClassName('show-pic-container')[0];
+    picContainer.style.background = "url(" + urlArray[urlIndex]+ ") no-repeat center";
+    picContainer.style.backgroundSize = 'contain';
+    var toPage = document.getElementsByClassName('toPage')[0];
+    toPage.onclick = function () {
+        var temUse = window.location.pathname;
+        if(temUse.indexOf('mobileMain.html') === -1) {//当前为mobileMain.html
+            window.location.href = './mobileMain.html'
+        }
+    }
+    var menuShow = document.getElementById('menu-show');
+    var liDom = menuShow.getElementsByTagName('li');
+    for(let i = 0,lenI = liDom.length;i < lenI; i++) {
+        liDom[i].onclick = function () {
+            for(let j of liDom) {
+                if(j.className.indexOf('active') !== -1) {
+                    j.className = '';
+                    break;
+                }
+            }
+            this.className = 'active';
+            //console.log(this.getElementsByTagName('a')[0].getAttribute('data-id'));
+            var scrollId = this.getElementsByTagName('a')[0].getAttribute('data-id');
+            if(scrollId) {
+                document.getElementById(scrollId).scrollIntoView();
+            }
+            setTimeout(function() {
+                menuShow.style.display = 'none';
+            },200);
+        }
+    }
+
+    var menuIcon = document.getElementById('menu-icon');
+    menuIcon.onclick = function() {
+        var _display = menuShow.style.display;
+        if(!_display || _display == 'none') {
+            menuShow.style.display = 'block';
+        } else {
+            menuShow.style.display = 'none';
+        }
+    }
+    var picContainer = document.getElementsByClassName('dl-container');
+    for(let i = 0, lenI = picContainer.length; i < lenI; i++) {
+        picContainer[i].onclick = function () {
+            console.log(this.getAttribute('data-url'))
+        }
+    }
+    /*window.onresize = function () {
+        var temUseNum = document.body.clientWidth;
+        if (temUseNum < 480) {
+            window.location.href = './mobileMain.html'
+        } else {
+            window.location.href = 'index.html'
+        }
+    }*/
+</script>
+</body>
+</html>

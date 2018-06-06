@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>寒冰制冷</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=yes"/>
+    <meta content="email=no" name="format-detection">
+    <meta name="Keywords" content="冷库安装,制冷设备">
+    <meta name="Description" content="主要提供烟台冷库安装,烟台制冷设备等,公司拥有独立设计图纸,安装调试,运营管理大型制冷工程的整体实力,短短几年时间已为上百家客户提供了优良的产品和服务">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/adapter.js"></script>
+    <style>
+        body{
+            background: #fff;
+            font-family: '微软雅黑';
+        }
+        .head{
+            padding-top:0.2rem;
+            display: inline-block;
+            width:100%;
+            line-height: 2.2rem;
+            text-align: center;
+            padding-left:0.5rem;
+        }
+        .banner-container{
+            width:100%;
+            height: 9rem;
+        }
+        .wqd-svgicon path{fill:#333;}
+        .showHead{
+            display: inline-block;
+            letter-spacing: 2px;
+            color:#333;
+            font-weight: 300;
+            font-size: 0.8rem;
+            float:left;
+        }
+        .menu-icon{
+            margin-right:0.6rem;
+            float:right;
+        }
+        .menu-show{
+            position: absolute;
+            top:2.5rem;
+            width:100%;
+            overflow: hidden;
+            display: none;
+            z-index: 100;
+            background: #fff;
+        }
+        .menu-show li{
+            width:100%;
+            height:1.3rem;
+            line-height: 1.3rem;
+        }
+        .menu-show li a{
+            display: inline-block;
+            color:#333;
+            margin-left:0.5rem;
+        }
+        .menu-show .active{
+            background: #107FD8;
+        }
+        .menu-show .active a{
+            color:#fff;
+        }
+        .menu-show li:hover{
+            background: #333;
+        }
+        .menu-show li:hover a{
+            color:#fff;
+        }
+        .introduce, .device-list{
+            width:100%;
+            overflow: hidden;
+            background: #F5F5F5;
+            padding-top:1.5rem;
+        }
+        .device-list{
+            padding-top:0.5rem;
+            background: #fff;
+        }
+        .introduce .detail, .device-list .detail{
+            width:80%;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        .showPic{
+            width:100%;
+        }
+        .showPTitle{
+            width:100%;
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color:#4C4B4B;
+            margin-bottom:5px;
+        }
+        .introduce .text{
+            width:100%;
+            text-align: justify;
+            color: #808080;
+            font-size: 0.6rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .device-list img{
+            margin-top:0.5rem;
+        }
+        .device-list span{
+            display: inline-block;
+            width:100%;
+            text-align: center;
+        }
+        .contactUs{
+            width:100%;
+            overflow: hidden;
+            background: #107FD8;
+            padding-top:0.5rem;
+        }
+        .contactUs .contactPic{
+            width:8rem;
+            height:8rem;
+            margin:1rem auto;
+            background: url("./img/vertor.jpg") no-repeat center;
+            background-size:contain;
+        }
+        .contactUs .title{
+            width:80%;
+            margin: 0 auto;
+            line-height: 1.5rem;
+            font-size: 0.8rem;
+            color:#FFF;
+        }
+        .contactDetail{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .contactDetail span{
+            display: block;
+            color:#eee;
+        }
+        .showName{
+            display: inline-block;
+            width:100%;
+            color:#eee;
+            font-size: 0.6rem;
+            text-align: center;
+            margin-top:0.6rem;
+        }
+        .swapShowText{
+            width:9rem;
+            height:5rem;
+            font-size: 1rem;
+            text-align: right;
+            position: relative;
+            right:-6rem;
+            top:9rem;
+            font-family: Arial;
+            font-weight: bold;
+        }
+        .white{
+            color:#fff;
+        }
+        .deviceList .showTitle{
+            font-size: 0.7rem;;
+            font-weight: bold;
+        }
+        .deviceList{
+            margin-top:1rem;
+        }
+        #device-list{
+            padding-bottom:1rem;
+            width:13rem;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .logo{
+            display: inline-block;
+            width:7rem;
+            height:2.2rem;
+            background: url("./img/logo.png") no-repeat center;
+            background-size: contain;
+            float:left;
+            margin-left:-0.5rem;
+        }
+        .detail .detail-pic-cont{
+            width:10rem;
+            height:6rem;
+            margin: 0 auto;
+            background: url("./img/pic1.jpg") no-repeat center;
+            background-size: contain;
+            margin-bottom: 0.5rem;
+        }
+        .dl-container{
+            width:6rem;
+            height:5.5rem;
+            float:left;
+            margin-bottom:8px;
+            border:1px solid #eee;
+            padding-top:0.2rem;
+            margin-right:calc(1rem - 4px);
+            cursor:pointer;
+        }
+        .dl-container:nth-child(2n+1){
+            margin-right:0;
+        }
+        .dl-container .dl-pic{
+            width:6rem;
+            height:4.3rem;
+        }
+        .dl-container .dl-title{
+            line-height: 1rem;
+            text-align: center;
+        }
+        .picFlag1{
+            background: url("./img/风冷式速冻柜.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag2{
+            background: url("./img/现场制作速冻柜.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag3{
+            background: url("./img/现场组装速冻柜.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag4{
+            background: url("./img/直冷式速冻柜.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag5{
+            background: url("./img/V型顶吹风风冷机组.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag6{
+            background: url("./img/并联机组.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag7{
+            background: url("./img/并联机组.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag8{
+            background: url("./img/活塞式风冷机组.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag9{
+            background: url("./img/新型铝合金搁架.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag10{
+            background: url("./img/铝合金排管.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag11{
+            background: url("./img/铝合金排管2.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag12{
+            background: url("./img/大型组合冷库.png") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag13{
+            background: url("./img/小型组合冷库.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag14{
+            background: url("./img/青岛啤酒.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .picFlag15{
+            background: url("./img/烟台绿叶动物保健品有限公司.jpg") no-repeat center;
+            background-size: cover;
+        }
+        .detail{
+            margin-bottom: 2.4rem;
+        }
+        .fixedInfo{
+            width:100%;
+            height:1.8rem;
+            background: #107FD8;
+            position: fixed;
+            bottom:0;
+            overflow: hidden;
+        }
+        .fixedInfo div{
+            width:calc(33.33% - 1px);
+            color:#eee;
+            float: left;
+            line-height: 1.8rem;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+        .fixedInfo .info_detail{
+            border-right:1px dotted #eee;
+            border-top:1px dotted #eee;
+            cursor: pointer;
+        }
+        .fixedInfo .info_detail:nth-child(3){
+            border-right:none;
+        }
+        .fixedInfo .toPhone a{
+            display: inline-block;
+            width:100%;
+            height:100%;
+            color:#eee;
+            text-decoration: none;
+        }
+        .swiper-container{
+            overflow: hidden;
+            width: 100%;
+            height:10rem;
+            background:url("./img/11.png") no-repeat center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<div class="fixedInfo">
+    <div class="info_detail toPage">首页</div>
+    <div class="info_detail toPhone"><a href="tel:13806385616">电话</a></div>
+    <div class="info_detail toAddress">地址</div>
+</div>
+<div class="head">
+    <!--<span class="showHead">寒冰制冷</span>-->
+    <div class="logo"></div>
+    <div class="menu-icon" id="menu-icon">
+        <svg style="display:inline-block;vertical-align: middle;margin:0 auto;width:40px;height:40px;" viewBox="-250 -250 2392 2392" xmlns="http://www.w3.org/2000/svg" class="wqd-svgicon"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"></path></svg>
+    </div>
+</div>
+<ul class="menu-show" id="menu-show">
+    <!--<li class="active"><a>首页</a></li>
+    <li><a data-id="introduce">公司简介</a></li>
+    <li><a data-id="device-list">设备列表</a></li>
+    <li><a data-id="contactUs">联系我们</a></li>-->
+</ul>
+<div class="swiper-container">
+
+</div>
+<div class="introduce" id="introduce">
+    <div class="detail">
+        <!--<div class="detail-pic-cont"></div>-->
+        <!--<img src="./img/pic1.jpg" class="showPic">-->
+        <h6 class="showPTitle">公司简介</h6>
+        <div class="text">
+            <span style="color:#107FD8">烟台寒冰制冷设备有限公司</span>是一家专门从事制冷系统整体解决方案的专业化工程公司，主要业务为冷库及空调工程的设计安装及售后。公司主要产品有制冷机组系列，提供德国比泽尔，艾默生谷轮，汉钟复盛，丹佛斯，莱富康的品牌机组；速冻冷柜系列，广泛应用于速冻海参、速冻水饺等速冻领域；新型节能环保蒸发器系列，包括铝合金排管及铝合金速冻搁架；蒸发式冷凝器；冷风机；聚氨酯冷库板、冷库门等。我们一直以精湛的技术，良好的服务为客户提供最大的价值为经营理念，与广大客户一道携手共进，砥砺前行！
+        </div>
+    </div>
+</div>
+<!--<div class="device-list" id="successEx">
+    <div class="detail">
+        <h6 class="title">成功案例</h6>
+        <img src="./img/小型组合冷库.png" class="showPic">
+        <span>小型组合冷库</span>
+        <img src="./img/中型组合冷库.png" class="showPic">
+        <span>中型组合冷库</span>
+        <img src="./img/大型组合冷库.png" class="showPic">
+        <span>大型组合冷库</span>
+    </div>
+</div>-->
+<div class="device-list" id="device-list">
+    <h6 class="showPTitle">设备列表</h6>
+    <div class="dl-container" data-url="1">
+        <div class="dl-pic picFlag1"></div>
+        <div class="dl-title">风冷式速冻柜</div>
+    </div>
+    <div class="dl-container" data-url="2">
+        <div class="dl-pic picFlag2"></div>
+        <div class="dl-title">现场制作速冻柜</div>
+    </div>
+    <div class="dl-container" data-url="3">
+        <div class="dl-pic picFlag3"></div>
+        <div class="dl-title">现场组装速冻柜</div>
+    </div>
+    <div class="dl-container" data-url="4">
+        <div class="dl-pic picFlag4"></div>
+        <div class="dl-title">直冷式速冻柜</div>
+    </div>
+    <div class="dl-container" data-url="5">
+        <div class="dl-pic picFlag5"></div>
+        <div class="dl-title">V型顶吹风风冷机组</div>
+    </div>
+    <div class="dl-container" data-url="6">
+        <div class="dl-pic picFlag6"></div>
+        <div class="dl-title">并联机组</div>
+    </div>
+    <div class="dl-container" data-url="7">
+        <div class="dl-pic picFlag7"></div>
+        <div class="dl-title">并联机组</div>
+    </div>
+    <div class="dl-container" data-url="8">
+        <div class="dl-pic picFlag8"></div>
+        <div class="dl-title">活塞式风冷机组</div>
+    </div>
+    <div class="dl-container" data-url="9">
+        <div class="dl-pic picFlag9"></div>
+        <div class="dl-title">新型铝合金搁架</div>
+    </div>
+    <div class="dl-container" data-url="10">
+        <div class="dl-pic picFlag10"></div>
+        <div class="dl-title">铝合金排管</div>
+    </div>
+    <!--<div class="dl-container" data-url="11">
+        <div class="dl-pic picFlag11"></div>
+        <div class="dl-title">铝合金排管</div>
+    </div>-->
+    <div class="dl-container" data-url="12">
+        <div class="dl-pic picFlag12"></div>
+        <div class="dl-title">大型组合冷库</div>
+    </div>
+    <div class="dl-container" data-url="13">
+        <div class="dl-pic picFlag13"></div>
+        <div class="dl-title">小型组合冷库</div>
+    </div>
+    <div class="dl-container" data-url="14">
+        <div class="dl-pic picFlag14"></div>
+        <div class="dl-title">青岛啤酒_案例</div>
+    </div>
+    <div class="dl-container" data-url="15">
+        <div class="dl-pic picFlag15"></div>
+        <div class="dl-title">烟台绿叶_案例</div>
+    </div>
+    <!--<div class="detail">
+        <h6 class="title">设备列表</h6>
+        <div class="deviceList">
+            <span class="showTitle">制冷机组</span>
+            <img src="./img/冷冻涡旋一体机组.png" class="showPic">
+            <img src="./img/活塞式风冷机组.png" class="showPic">
+            <img src="./img/螺杆并联机组.png" class="showPic">
+        </div>
+        <div class="deviceList">
+            <span class="showTitle">新型速冻柜</span>
+            <img src="./img/速冻柜.png" class="showPic">
+            <img src="./img/速冻柜2.png" class="showPic">
+            <img src="./img/速冻柜3.png" class="showPic">
+        </div>
+        <div class="deviceList">
+            <span class="showTitle">新型铝合金搁架</span>
+            <img src="./img/新型铝合金搁架.png" class="showPic">
+            <img src="./img/新型铝合金搁架1.png" class="showPic">
+            <img src="./img/新型铝合金搁架2.png" class="showPic">
+        </div>
+        <div class="deviceList">
+            <span class="showTitle">新型铝合金排管</span>
+            <img src="./img/铝合金排管.png" class="showPic">
+            <img src="./img/新型铝合金排管.png" class="showPic">
+        </div>
+    </div>-->
+</div>
+<div class="contactUs" id="contactUs">
+    <div class="detail">
+        <div class="showPTitle" style="color:white;">联系我们</div>
+        <!--<div class="contactPic">
+
+        </div>-->
+        <div class="contactDetail" style="font-size: 16px">
+            <span>电话：13806385616</span>
+            <span>微信：13806385616</span>
+            <span>邮箱：13806385616@139.com</span>
+        </div>
+        <div class="showName">鲁ICP备14006355号 @烟台寒冰制冷设备有限公司</div>
+    </div>
+</div>
+<a id="forTrigger" style="display: none;"></a>
+<script>
+    var temUse = window.location.pathname;
+    var toPage = document.getElementsByClassName('toPage')[0];
+    var toAddress = document.getElementsByClassName('toAddress')[0];
+    var forTrigger = document.getElementById('forTrigger');
+    toAddress.addEventListener('touchend', function () {
+        if(temUse.indexOf('mobileMain_map.html') === -1){//当前为mobileMain.html
+            forTrigger.href = './mobileMain_map.html';
+            forTrigger.click();
+        }
+    },false);
+    toPage.addEventListener('click', function () {
+        if(temUse.indexOf('mobileMain.html') === -1){//当前为mobileMain.html
+            forTrigger.href = './mobileMain.html';
+            forTrigger.click();
+        }
+    },false);
+
+
+    var picContainer = document.getElementsByClassName('dl-container');
+    for(let i = 0, lenI = picContainer.length; i < lenI; i++) {
+        picContainer[i].addEventListener('click', function () {
+            forTrigger.href = './mobileMain_detail.html?id='+this.getAttribute('data-url');
+            forTrigger.click();
+        }, false)
+    }
+</script>
+</body>
+</html>
